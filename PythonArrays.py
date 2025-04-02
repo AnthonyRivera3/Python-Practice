@@ -1,4 +1,6 @@
-#This is for arrays in python
+#This is for Arrays in python]
+#Lines 4-87 is lists practice
+
  
 #A list in python starts from elements 0... In order to make one you just need a name for it and []
  #I can also put any data type inside of the List. A list can have different data types
@@ -74,4 +76,33 @@ print(MyThirdList[len(MyThirdList)//2::-1])
 
 print("-------------------------------------------")
 
-#A string would make a list of each character 
+#Pulling specific characters out of a string using the list references
+
+Stringlist = "abcdefghijklmnopqrstuvwxyz"
+print(len(Stringlist))
+
+print(Stringlist[0:])
+print(Stringlist[0::2])
+
+#printing alphabet backwards  
+print(Stringlist[::-1]) 
+
+print("-------------------------------------------")
+
+#Range practice
+#When you make a range it is like your making a list but without manually typing it
+#Ranges are made with a name = list(range(...)) 
+#A range has the same ideology a list main differnece is how you create one. Instead of ":" it is ","
+
+MyfirstRange = list(range(10))
+print(MyfirstRange)
+
+
+#Im going to make a range that has elements starting from 1000 to 1100 going by 10's
+
+PracticeRange = list(range(1000, 1101, 10 ))
+print(PracticeRange)
+
+print("-------------------------------------------")
+
+
