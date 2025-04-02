@@ -1,4 +1,4 @@
-#This file is dedicated to loops!!
+#This file is dedicated to loops you!!
 
 #in order to make a for loop we need to use the key works "for" and "in"
 for colors in ["blue", "green", "yellow", "red", "purple"]:
@@ -53,3 +53,29 @@ print("-------------------------------------------")
 
 #while loop
 
+n=10
+
+while n>-1:
+   print(n)
+   n-=1
+
+
+print("-------------------------------------------")
+
+#making a recursive function
+#When you make a function you just need to use def and a name
+
+m=5
+def functiontest(m): 
+   if m==0: return 1
+   return m * functiontest(m-1)
+
+
+
+
+def function(k):
+   if k==0:
+      return k
+   
+   
+   print(function(0))
