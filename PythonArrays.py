@@ -31,6 +31,9 @@ print(MyfirstList[:4])
 #This will print the whole List
 print(MyfirstList[:])
 
+#This will print specific characters within the element
+print(MyfirstList[1][2:])
+
 print("\n")
 print("\n")
 print("\n")
