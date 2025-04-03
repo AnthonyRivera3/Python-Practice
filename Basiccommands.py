@@ -6,6 +6,10 @@ a = 3
 b = 2
 c = a+b 
 
+#How to get char values
+f = "A"
+print(ord(f))
+
 #regular strings are follwed by just quotes
 str1 = "Hello Im anthony"
 
