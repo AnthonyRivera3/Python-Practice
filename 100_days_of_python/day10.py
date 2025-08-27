@@ -31,16 +31,16 @@ def recall(answer):
     operation = input(" \n '/' \n '*' \n '+' \n '-' \n Pick an operation: ")
     if operation == '/':
         answer = Division(answer,num2)
-        print("\nThis is your answer: {answer}")
+        print(f"\nThis is your answer: {answer}")
     if operation == '*':
         answer = Multiplication(answer,num2)
-        print("\nThis is your answer: {answer}")
+        print(f"\nThis is your answer: {answer}")
     if operation == '+':
         answer = Addition(answer,num2)
-        print("\nThis is your answer: {answer}")
+        print(f"\nThis is your answer: {answer}")
     if operation == '-':
         answer = Subtraction(answer,num2)
-        print("\nThis is your answer: {answer}")
+        print(f"\nThis is your answer: {answer}")
     if operation == '':
         Nothing()
     
@@ -54,16 +54,16 @@ def call():
     operation = input(" \n '/' \n '*' \n '+' \n '-' \n Pick an operation: ")
     if operation == '/':
         answer = Division(num1,num2)
-        print("\nThis is your answer: {answer}")
+        print(f"\nThis is your answer: {answer}")
     if operation == '*':
         answer = Multiplication(num1,num2)
-        print("\nThis is your answer: {answer}")
+        print(f"\nThis is your answer: {answer}")
     if operation == '+':
         answer = Addition(num1,num2)
-        print("\nThis is your answer: {answer}")
+        print(f"\nThis is your answer: {answer}")
     if operation == '-':
         answer = Subtraction(num1,num2)
-        print("\nThis is your answer: {answer}")
+        print(f"\nThis is your answer: {answer}")
     if operation == '':
         Nothing()
     
