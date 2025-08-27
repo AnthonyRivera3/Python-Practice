@@ -26,10 +26,31 @@ def Division(a,b):
 def Nothing(operator):
     call()
 
+def recall(answer):
+    num2 = int(input("\nWhat is the second number?: "))
+    operation = input(" \n '/' \n '*' \n '+' \n '-' \n Pick an operation: ")
+    if operation == '/':
+        answer = Division(answer,num2)
+        print("\nThis is your answer: {answer}")
+    if operation == '*':
+        answer = Multiplication(answer,num2)
+        print("\nThis is your answer: {answer}")
+    if operation == '+':
+        answer = Addition(answer,num2)
+        print("\nThis is your answer: {answer}")
+    if operation == '-':
+        answer = Subtraction(answer,num2)
+        print("\nThis is your answer: {answer}")
+    if operation == '':
+        Nothing()
+    
+    result1 = input("Would you like to do anything else with that answer? 'y', 'n': ")
+    if result1 == 'y':
+        recall(answer)
 
 def call():
-    num1 = input("What is the first number?: ")
-    num2 = input("\nWhat is the second number?: ")
+    num1 = int(input("What is the first number?: "))
+    num2 = int(input("\nWhat is the second number?: "))
     operation = input(" \n '/' \n '*' \n '+' \n '-' \n Pick an operation: ")
     if operation == '/':
         answer = Division(num1,num2)
@@ -48,4 +69,6 @@ def call():
     
     result1 = input("Would you like to do anything else with that answer? 'y', 'n': ")
     if result1 == 'y':
-        call(answer)
+        recall(answer)
+
+call()
