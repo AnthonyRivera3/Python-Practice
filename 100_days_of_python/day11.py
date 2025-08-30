@@ -105,4 +105,7 @@ def over_21_check(player):
 
 def ace():
    answer = input("\nWould you like turn the Ace into a 1 or 11?: ")
-   for 
+   if answer == 1:
+       new_ace = [1]
+    elif answer == 11:
+        new_ace = [11]
