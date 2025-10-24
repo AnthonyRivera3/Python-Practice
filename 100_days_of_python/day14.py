@@ -1,4 +1,5 @@
 #higher lower game project
+#The purpose of this game is to guess how many points you could earn!
 import random
 
 #Function for getting a random game
