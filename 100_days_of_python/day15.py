@@ -1,8 +1,29 @@
 #coffee Vending machine maker program
 import sys
 
+#Element 0 = water, Element 1 = coffee,  #Element 2 = milk
+Coffee_choices = {
+    'espresso': [50,18],
+    'latte': [200,24,150],
+    'cappuccino': [250,24,100]
+}
+#resource levels and money in machine
+water = 1000
+coffee = 1000
+milk = 1000
+money = 0
+final_ans = 1
+
+
 def report():
-    print(f"Total Money Collected:{money}")
+    place_value_count = len(str(money))
+    if place_value_count == 3:
+        print(f"Total Money Collected:{money/100}")
+    if place_value_count == 4:
+        print(f"Total Money Collected:{money/100}")
+    if place_value_count == 5:
+        print(f"Total Money Collected:{money/100}")
+    
     print(f"Total  Water Left:{water}")
     print(f"Total Coffee Left:{coffee}")
     print(f"Total Milk Left:{milk}")
@@ -33,7 +54,7 @@ def price_calculator(coffee_type):
         total += (dime*dime_total)
         total += (quarter*quarter_total)
         while total < espresso:
-            print(f"You put in {total}. Your price is $2.00\n")
+            print(f"You put in {total/100} Your price is $2.00\n")
             penny_total = int(input("Amount of pennies: "))
             nickel_total = int(input("Amount of nickels: "))
             dime_total = int(input("Amount of dime: "))
@@ -44,17 +65,23 @@ def price_calculator(coffee_type):
             total += (quarter*quarter_total)
             if total > espresso:
                 change = total-espresso
-                print(f"You gave us more your change is: {change}\n")
-                money += (total-change)
-            elif total == espresso:
-                money += total
+                print(f"You gave us more your change is: .{change}\n")
+                
         
     
     #latte price calculator
     elif coffee_type == '2':
-    
+        print("Your total is $2.50 enter change:\n")
+        penny_total = int(input("Amount of pennies: "))
+        nickel_total = int(input("Amount of nickels: "))
+        dime_total = int(input("Amount of dime: "))
+        quarter_total = int(input("Amount of quarter: "))
+        total += (pennie*penny_total)
+        total += (nickel*nickel_total)
+        total += (dime*dime_total)
+        total += (quarter*quarter_total)
         while total < latte:
-            print(f"You put in {total}. Your price is $2.50\n")
+            print(f"You put in {total/100} Your price is $2.50\n")
             penny_total = int(input("Amount of pennies: "))
             nickel_total = int(input("Amount of nickels: "))
             dime_total = int(input("Amount of dime: "))
@@ -65,15 +92,22 @@ def price_calculator(coffee_type):
             total += (quarter*quarter_total)
             if total > latte:
                 change = total-latte
-                print(f"You gave us more your change is: {change}\n")
-                money += (total-change)
-            elif total == latte:
-                money += total
+                print(f"You gave us more your change is: .{change}\n")
+                
 
     #cappuncino price calculator
     elif coffee_type == '3':
+        print("Your total is $3.00 enter change:\n")
+        penny_total = int(input("Amount of pennies: "))
+        nickel_total = int(input("Amount of nickels: "))
+        dime_total = int(input("Amount of dime: "))
+        quarter_total = int(input("Amount of quarter: "))
+        total += (pennie*penny_total)
+        total += (nickel*nickel_total)
+        total += (dime*dime_total)
+        total += (quarter*quarter_total)
         while total < cappuccino:
-            print(f"You put in {total}. Your price is $2.50\n")
+            print(f"You put in {total/100} Your price is $3.00\n")
             penny_total = int(input("Amount of pennies: "))
             nickel_total = int(input("Amount of nickels: "))
             dime_total = int(input("Amount of dime: "))
@@ -84,23 +118,9 @@ def price_calculator(coffee_type):
             total += (quarter*quarter_total)
             if total > cappuccino:
                 change = total-cappuccino
-                print(f"You gave us more your change is: {change}\n")
-                money += (total-change)
-            elif total == cappuccino:
-                money += total
+                print(f"You gave us more your change is: .{change}\n")
+                
 
-water = 1000
-coffee = 1000
-milk = 1000
-money = 0
-final_ans = 1
-
-#Element 0 = water, Element 1 = coffee,  #Element 2 = milk
-Coffee_choices = {
-    'espresso': [50,18],
-    'latte': [200,24,150],
-    'cappuccino': [250,24,100]
-}
 
 
 while final_ans != 0:
@@ -131,6 +151,7 @@ while final_ans != 0:
         price_calculator('1')
         print("\n"*5)
         print("Transaction complete:")
+        money += 200
         print("Thankyou for your purchase enjoy!")
         print("\n"*5)
 
@@ -141,6 +162,7 @@ while final_ans != 0:
         price_calculator('2')
         print("\n"*5)
         print("Transaction complete:")
+        money += 250
         print("Thankyou for your purchase enjoy!")
         print("\n"*5)
 
@@ -151,16 +173,23 @@ while final_ans != 0:
         price_calculator('3')
         print("\n"*5)
         print("Transaction complete:")
+        money += 300
         print("Thankyou for your purchase enjoy!")
         print("\n"*5)
     
-    final_ans = int(input("\nWould you like anything else? ('0' for NO and '1' for YES)\n"))
-    while (final_ans != 1) and (final_ans !=0):
-        final_ans = (input("\nInput a possible choice ('0' for NO and '1' for YES)\n"))
-        if final_ans == 0:
+    final_ans = (input("\nWould you like anything else? ('0' for NO and '1' for YES)\n"))
+    while True:
+        if final_ans == 0 or final_ans == '0':
             sys.exit(0)
         if final_ans == 'report':
             report()
+        if final_ans == 1 or final_ans == '1':
+            print("proccessing....\n")
+            break
+        else:
+            final_ans = (input("\nInput a possible choice ('0' for NO and '1' for YES)\n"))
+        
+        
 
 
     
