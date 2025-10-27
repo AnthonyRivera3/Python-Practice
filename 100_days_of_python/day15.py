@@ -107,7 +107,7 @@ def price_calculator(coffee_type):
         total += (dime*dime_total)
         total += (quarter*quarter_total)
         while total < cappuccino:
-            print(f"You put in {total/100} Your price is $3.00\n")
+            print(f"You put in {total/100} Your price is $3.00 \n")
             penny_total = int(input("Amount of pennies: "))
             nickel_total = int(input("Amount of nickels: "))
             dime_total = int(input("Amount of dime: "))
@@ -145,6 +145,23 @@ while final_ans != 0:
         elif ans == 'report':
             report()
 
+    if water < 50 or coffee < 18:
+            print("Sorry Item not avalible\n")
+            final_ans = (input("\nWould you like anything else? ('0' for NO and '1' for YES)\n"))
+            while True:
+                if final_ans == 0 or final_ans == '0':
+                    sys.exit(0)
+                if final_ans == 'report':
+                     report()
+                if final_ans == 1 or final_ans == '1':
+                    print("proccessing....\n")
+                    break
+                else:
+                    final_ans = (input("\nInput a possible choice ('0' for NO and '1' for YES)\n"))
+
+
+
+
     if ans == '1':
         water -= Coffee_choices["espresso"][0]
         coffee -= Coffee_choices["espresso"][1]
@@ -155,6 +172,22 @@ while final_ans != 0:
         print("Thankyou for your purchase enjoy!")
         print("\n"*5)
 
+
+
+    if water < 150 or coffee < 24 or milk < 150:
+            print("Sorry Item not avalible\n")
+            final_ans = (input("\nWould you like anything else? ('0' for NO and '1' for YES)\n"))
+            while True:
+                if final_ans == 0 or final_ans == '0':
+                    sys.exit(0)
+                if final_ans == 'report':
+                     report()
+                if final_ans == 1 or final_ans == '1':
+                    print("proccessing....\n")
+                    break
+                else:
+                    final_ans = (input("\nInput a possible choice ('0' for NO and '1' for YES)\n"))
+     
     elif ans == '2':
         water -= Coffee_choices["latte"][0]
         coffee -= Coffee_choices["latte"][1]
@@ -165,6 +198,24 @@ while final_ans != 0:
         money += 250
         print("Thankyou for your purchase enjoy!")
         print("\n"*5)
+
+
+    if water < 250 or coffee < 24 or milk < 100:
+            print("Sorry Item not avalible\n")
+            final_ans = (input("\nWould you like anything else? ('0' for NO and '1' for YES)\n"))
+            while True:
+                if final_ans == 0 or final_ans == '0':
+                    sys.exit(0)
+                if final_ans == 'report':
+                     report()
+                if final_ans == 1 or final_ans == '1':
+                    print("proccessing....\n")
+                    break
+                else:
+                    final_ans = (input("\nInput a possible choice ('0' for NO and '1' for YES)\n"))
+     
+
+
 
     elif ans == '3':
         water -= Coffee_choices["cappuccino"][0]
