@@ -38,5 +38,17 @@ my_screen.exitonclick()
 
 #Pyhton packages are packages of other peoples code that is developed by the community
 
-import prettytable
 
+
+#Using functions from pretty table to get a table
+from prettytable import PrettyTable
+
+table = PrettyTable()
+#methods - using the functions inside of the class
+table.add_column("Pokemon Name", ["Pikachu", "Squirtle", "Charmander"])
+table.add_column("Type", ["Eletric", "Water", "Fire"])
+print(table)
+#Attributes - changing data inside of our class
+table.border = False
+table.header_style = "upper"
+print(table)
