@@ -2,28 +2,35 @@
 
 class User:
     #constructor
-    def __init__(self):
+    def __init__(self, username):
         print("New user being created...")
-
+        self.username = username
+        #this will hold a value in the object for followers
+        self.followers = 0
 
 
 
 #object
-user_1 = User()
-user_2 = User()
-#attribute
-user_1.id = "001"
-user_1.username = "Anthony"
+#user_1 = User()
+#user_2 = User()
 
-print(user_1.username)
+#attribute
+#user_1.id = "001"
+#user_1.username = "Anthony"
+
+#print(user_1.username)
 
 #Attrubutes
-user_2.id = "002"
-user_2.username = "james"
+#user_2.id = "002"
+#user_2.username = "james"
 
 
-print(user_2.username)
+#print(user_2.username)
 
+
+
+user3 = User("gigi")
+print(user3.followers)
 
 
 
